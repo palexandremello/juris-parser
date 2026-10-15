@@ -36,8 +36,3 @@ Variáveis: `STIRLING_URL` (padrão `http://localhost:8080`), `STIRLING_API_KEY`
 - OCR é o passo caro (~3,7 s/página) e roda só na CPU (Tesseract); GPU não acelera o Stirling.
 - DOCX depende do LibreOffice residente (`unoserver`). Sem ele, cada conversão abre um `soffice` frio: ~56 s → 0,5 s com ele.
   A imagem Docker já cuida disso.
-
-## Limitações conhecidas
-
-- Markdown: em tabelas, colunas adjacentes podem ser fundidas (ex.: "Valor (R$) Índice").
-- Os PDFs em `dados/entrada` são **fictícios** (nomes, CPFs e processos inventados).

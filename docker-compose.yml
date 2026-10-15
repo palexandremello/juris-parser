@@ -1,0 +1,13 @@
+# Stirling-PDF local para o juris-pdf. A imagem "fat" já traz OCRmyPDF, Ghostscript, LibreOffice/unoserver.
+services:
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf:latest-fat
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./stirling/tessdata:/usr/share/tessdata   # coloque por.traineddata aqui
+      - ./stirling/configs:/configs
+    environment:
+      - DOCKER_ENABLE_SECURITY=false
+      - SECURITY_ENABLELOGIN=false
+    restart: unless-stopped

@@ -1,0 +1,24 @@
+[project]
+name = "juris-pdf"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "pypdf>=6.19.0",
+]
+
+[project.scripts]
+juris-pdf = "juris_pdf:main"
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pillow>=12.3.0",
+    "pytest>=9.1.1",
+    "reportlab>=5.0.1",
+]
